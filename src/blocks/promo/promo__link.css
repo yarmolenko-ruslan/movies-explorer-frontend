@@ -1,0 +1,28 @@
+.promo__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #303030;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.promo__link:hover {
+  opacity: 70%;
+  transition: opacity 0.3s;
+}
+
+@media (max-width: 320px) {
+  .promo__link {
+    font-size: 10px;
+    line-height: 16px;
+    width: 82px;
+    height: 26px;
+  }
+}

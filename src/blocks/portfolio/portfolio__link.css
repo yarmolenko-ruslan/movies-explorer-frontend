@@ -1,0 +1,47 @@
+.portfolio__link {
+  display: block;
+  margin-right: 6px;
+  padding: 19px 0;
+  font-size: 30px;
+  line-height: 167%;
+  color: #fff;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  text-decoration: none;
+  background-image: url(../../images/arrov.svg);
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  transition: opacity 0.3s;
+}
+
+.portfolio__link:hover {
+  opacity: 70%;
+}
+
+@media (max-width: 768px) {
+  .portfolio__link {
+    padding: 19px 0 20px 0;
+    margin-right: 5px;
+    font-size: 28px;
+    line-height: 50px;
+    background-position: 100% 53%;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio__link {
+    font-size: 18px;
+    line-height: 28px;
+    background-position: 100% 47%;
+    background-size: 11px 11px;
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 300px) {
+  .portfolio__link {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

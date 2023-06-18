@@ -1,0 +1,12 @@
+.search-form__checkbox,
+.search-form__checkbox:active {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.search-form__checkbox:checked + .search-form__checkbox-fake:before {
+  left: calc(100% - 18px);
+  background: #2BE080;
+}

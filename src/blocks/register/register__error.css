@@ -1,0 +1,10 @@
+.register__error {
+  display: block;
+  opacity: 0;
+  cursor: default;
+  font-size: 10px;
+  line-height: 12.1px;
+  font-weight: 400;
+  margin: 5px 0 4px;
+  color: #ee3465;
+}

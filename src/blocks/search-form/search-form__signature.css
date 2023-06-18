@@ -1,0 +1,13 @@
+.search-form__signature {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 138%;
+  margin-right: 14px;
+}
+
+@media (max-width: 320px) {
+  .search-form__signature {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}

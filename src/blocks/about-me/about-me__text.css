@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .about-me__text {
+    max-width: 355px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-me__text {
+    max-width: 100%;
+  }
+}

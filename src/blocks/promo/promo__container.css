@@ -1,0 +1,20 @@
+.promo__container {
+  background-color: #272727;
+  max-width: 1280px;
+  width: 94vw;
+  border-radius: 10px;
+  padding-top: 160px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .promo__container {
+    padding-top: 351px;
+  }
+}
+
+@media (max-width: 320px) {
+  .promo__container {
+    padding: 220px 0 17px;
+  }
+}

@@ -1,0 +1,7 @@
+.portfolio__point {
+  border-bottom: 1px solid #424242;
+}
+
+.portfolio__point:last-child {
+  border: none;
+}

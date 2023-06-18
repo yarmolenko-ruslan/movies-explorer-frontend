@@ -1,0 +1,10 @@
+.about-project__duration {
+  max-width: 450px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .about-project__duration {
+    max-width: 319px;
+  }
+}

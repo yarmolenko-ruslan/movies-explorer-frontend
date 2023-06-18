@@ -1,0 +1,21 @@
+.about-project__info {
+  display: flex;
+  align-items: center;
+  gap: 140px;
+  margin: 70px 0 110px;
+}
+
+@media (max-width: 768px) {
+  .about-project__info {
+    gap: 31px;
+    margin: 70px 0 95px;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-project__info {
+    flex-direction: column;
+    margin: 61px 0 59px 4px;
+    gap: 57px;
+  }
+}

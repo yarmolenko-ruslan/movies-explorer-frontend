@@ -1,0 +1,14 @@
+.login__label {
+  font-size: 10px;
+  line-height: 121%;
+  font-weight: 400;
+  color: #8b8b8b;
+  display: block;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .login__label {
+    margin-bottom: 4px;
+  }
+}

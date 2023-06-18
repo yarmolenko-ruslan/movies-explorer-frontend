@@ -1,0 +1,24 @@
+.techs__icons {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .techs__icons {
+    margin: 0 auto;
+    max-width: 370px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 320px) {
+  .techs__icons {
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 178px;
+  }
+}

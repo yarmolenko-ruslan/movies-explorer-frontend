@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .about-me__container {
+    max-width: 708px;
+  }
+}

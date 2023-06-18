@@ -1,0 +1,14 @@
+.about-project__scale-text {
+  font-size: 14px;
+  line-height: 121%;
+  font-weight: 500;
+  color: #8b8b8b;
+  margin: 0;
+}
+
+@media (max-width: 320px) {
+  .about-project__scale-text {
+    font-size: 11px;
+    line-height: 12.74px;
+  }
+}

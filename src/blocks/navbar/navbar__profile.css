@@ -1,0 +1,30 @@
+.navbar__profile {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 142%;
+  margin-right: 43px;
+  margin-bottom: 70px;
+  position: relative;
+  transition: opacity 0.3s;
+}
+
+.navbar__profile::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #313131;
+  left: 71px;
+  top: -5px;
+  background-image: url(../../images/user-icon.svg);
+  background-size: 10.38px 10.67px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.navbar__profile:hover {
+  opacity: 70%;
+}
