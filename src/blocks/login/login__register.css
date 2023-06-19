@@ -1,9 +1,0 @@
-.login__register {
-  text-decoration: none;
-  color: #4285F4;
-  transition: opacity 0.3s;
-}
-
-.login__register:hover {
-  opacity: 70%;
-}

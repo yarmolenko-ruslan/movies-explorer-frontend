@@ -8,7 +8,7 @@
   color: #8b8b8b;
   font-weight: 400;
   font-size: 14px;
-  line-height: 128%;
+  line-height: 18px;
   box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@
   color: #8b8b8b;
   font-weight: 400;
   font-size: 14px;
-  line-height: 128%;
+  line-height: 18px;
 }
 
 .search-form__input:focus-visible {
@@ -32,12 +32,10 @@
 @media (max-width: 320px) {
   .search-form__input {
     font-size: 11px;
-    line-height: 18px;
     padding-left: 15px;
   }
 
   .search-form__input::placeholder {
     font-size: 11px;
-    line-height: 18px;
   }
 }

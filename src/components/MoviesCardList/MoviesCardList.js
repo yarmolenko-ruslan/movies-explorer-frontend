@@ -3,7 +3,7 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 
 function MoviesCardList() {
   return (
-    <header className="movies-list">
+    <section className="movies-list">
       <div className="movies-list__container container">
         <ul className="movies-list__list">
         <MoviesCard />
@@ -14,7 +14,7 @@ function MoviesCardList() {
           Ещё
         </button>
       </div>
-    </header>
+    </section>
   );
 }
 

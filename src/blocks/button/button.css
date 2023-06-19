@@ -1,4 +1,4 @@
-.register__button {
+.button {
   margin-top: 129px;
   background-color: #4285f4;
   width: 100%;
@@ -14,12 +14,12 @@
   font-weight: 500;
 }
 
-.register__button:hover {
+.button:hover {
   opacity: 70%;
 }
 
 @media (max-width: 420px) {
-  .register__button {
+  .button {
     margin-top: 217px;
     font-size: 12px;
     line-height: 14.52px;

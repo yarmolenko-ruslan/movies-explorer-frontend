@@ -2,7 +2,7 @@ import './Promo.css';
 
 function Promo() {
   return (
-    <div className='promo'>
+    <section className='promo'>
       <div className="promo__container container">
         <h1 className="promo__title title">
         Учебный проект студента факультета Веб-разработки.
@@ -13,7 +13,7 @@ function Promo() {
           <a href="#about-me" className="promo__link">Студент</a>
         </nav>
       </div>
-    </div>
+    </section>
   );
 }
 

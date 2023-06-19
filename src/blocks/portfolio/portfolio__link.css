@@ -3,7 +3,7 @@
   margin-right: 6px;
   padding: 19px 0;
   font-size: 30px;
-  line-height: 167%;
+  line-height: 50px;
   color: #fff;
   letter-spacing: -0.04em;
   font-weight: 400;
@@ -24,7 +24,6 @@
     padding: 19px 0 20px 0;
     margin-right: 5px;
     font-size: 28px;
-    line-height: 50px;
     background-position: 100% 53%;
   }
 }

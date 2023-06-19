@@ -14,10 +14,10 @@ function MoviesCard() {
           </h4>
         </div>
         <button
-            className="movies-card__favourites movies-card__favourites_active"
-            type="button"
-            aria-label="Избранное"
-          />
+          className="movies-card__favourites movies-card__favourites_active"
+          type="button"
+          aria-label="Избранное"
+        />
       </div>
       <img src={Plug} alt="Картинка" className="movies-card__image" />
     </li>

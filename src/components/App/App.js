@@ -17,7 +17,7 @@ import PageNotFound from '../PageNotFound/PageNotFound';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>

@@ -1,9 +1,9 @@
-.register__login {
+.message__link {
   text-decoration: none;
   color: #4285F4;
   transition: opacity 0.3s;
 }
 
-.register__login:hover {
+.message__link:hover {
   opacity: 70%;
 }

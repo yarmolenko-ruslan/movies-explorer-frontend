@@ -1,4 +1,4 @@
-.register__message {
+.message {
   text-align: center;
   width: 100%;
   font-weight: 400;
@@ -7,8 +7,8 @@
   margin-top: 16px;
 }
 
-@media (max-width: 768px) {
-  .register__message {
+@media (max-width: 420px) {
+  .message {
     font-size: 12px;
     line-height: 14.52px;
     margin-top: 15px;
