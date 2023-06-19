@@ -1,4 +1,5 @@
 .profile__input {
+  padding: 1px 0px;
   max-width: 340px;
   width: 100%;
   border: none;
@@ -20,4 +21,10 @@
 
 .profile__input:focus-visible {
   outline: none;
+}
+
+@media (max-width: 440px) {
+  .profile__input {
+    max-width: 220px;
+  }
 }

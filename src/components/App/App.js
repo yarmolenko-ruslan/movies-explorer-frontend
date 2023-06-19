@@ -27,12 +27,14 @@ function App() {
             <Route element={<Movies />} />
           </Route> */}
           <Route path="/movies" element={<Movies loggedIn={loggedIn} />} />
-          <Route path="/saved-movies" element={<ProtectedRoute />}>
+          <Route path="/saved-movies" element={<SavedMovies loggedIn={loggedIn} />} />
+          <Route path="/profile" element={<Profile loggedIn={loggedIn} />} />
+          {/* <Route path="/saved-movies" element={<ProtectedRoute />}>
             <Route element={<SavedMovies />} />
-          </Route>
-          <Route path="/profile" element={<ProtectedRoute />}>
+          </Route> */}
+          {/* <Route path="/profile" element={<ProtectedRoute />}>
             <Route element={<Profile />} />
-          </Route>
+          </Route> */}
           <Route path="/" element={<Main loggedIn={loggedIn} />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/signin" element={<Login />} />

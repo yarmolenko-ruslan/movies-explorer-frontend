@@ -1,16 +1,16 @@
 .about-project {
-  margin: 50px 0 110px;
+  padding: 50px 0 110px;
 }
 
 @media (max-width: 768px) {
   .about-project {
     max-width: 708px;
-    margin: 30px auto 89px;
+    padding: 30px auto 89px;
   }
 }
 
 @media (max-width: 320px) {
   .about-project {
-    margin-top: 71px;
+    padding-top: 71px;
   }
 }

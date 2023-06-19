@@ -1,16 +1,23 @@
 .profile__button {
   font-weight: 400;
   font-size: 13px;
-  line-height: 121%;
+  line-height: 15.73px;
   border: none;
   background-color: transparent;
   display: block;
   cursor: pointer;
-  margin: 0 auto 16px;
+  margin: 0 auto 14px;
   color: #fff;
   transition: opacity 0.3s;
 }
 
 .profile__button:hover {
   opacity: 70%;
+}
+
+@media (max-width: 440px) {
+  .profile__button {
+    font-size: 12px;
+    line-height: 14.52px;
+  }
 }

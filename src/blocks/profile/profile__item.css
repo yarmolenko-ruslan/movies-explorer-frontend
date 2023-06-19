@@ -8,3 +8,10 @@
 .profile__item:last-child {
   margin-bottom: 104px;
 }
+
+@media (max-width: 440px) {
+  .profile__item {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}

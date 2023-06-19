@@ -4,11 +4,11 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import SearchForm from '../Movies/SearchForm/SearchForm';
 import Footer from '../Footer/Footer';
 
-function SavedMovies() {
+function SavedMovies({ loggedIn }) {
 
   return (
     <div className="saved-movies">
-      <Header />
+      <Header loggedIn={loggedIn} />
       <SearchForm />
       <MoviesCardList />
       <Footer />
