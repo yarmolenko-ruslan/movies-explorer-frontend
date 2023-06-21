@@ -10,9 +10,11 @@ function Movies({ loggedIn }) {
   return (
     <div className="movies">
       <Header loggedIn={loggedIn} />
-      <SearchForm />
-      <MoviesCardList />
-      {/* <Preloader /> */}
+      <main className="movies__main">
+        <SearchForm />
+        <MoviesCardList />
+        {/* <Preloader /> */}
+      </main>
       <Footer />
     </div>
   )

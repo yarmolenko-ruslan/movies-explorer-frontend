@@ -6,7 +6,7 @@ function Profile({ loggedIn }) {
   return (
     <form className="profile" name="prof">
       <Header loggedIn={loggedIn} />
-      <div className="profile__container">
+      <main className="profile__container">
         <h1 className="profile__title">
           Привет, Виталий!
         </h1>
@@ -24,7 +24,7 @@ function Profile({ loggedIn }) {
         <button type="button" className="profile__button profile__button_red">
           Выйти из аккаунта
         </button>
-      </div>
+      </main>
     </form>
   )
 };

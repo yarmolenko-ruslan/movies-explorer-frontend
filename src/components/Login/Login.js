@@ -9,7 +9,6 @@ function Login() {
         <h1 className="login__title">
           Рады видеть!
         </h1>
-
         <label className="input__label" for="email" >E-mail</label>
         <input className="register__input input" id="email" type="email" placeholder="Почта" maxLength={50} required />
         <span className="input__error">Что-то пошло не так...</span>

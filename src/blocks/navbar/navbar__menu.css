@@ -1,6 +1,6 @@
 .navbar__menu {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   flex-direction: column;
   list-style: none;
   padding: 0;

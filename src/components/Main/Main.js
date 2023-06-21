@@ -10,15 +10,17 @@ import Footer from '../Footer/Footer';
 function Main({ loggedIn }) {
 
   return (
-    <div className="main">
+    <section className="main">
       <Header loggedIn={loggedIn} />
-      <Promo />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
-      <Portfolio />
+      <main className="main__main">
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+        <Portfolio />
+      </main>
       <Footer />
-    </div>
+    </section>
   )
 }
 

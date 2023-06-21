@@ -7,12 +7,14 @@ import Footer from '../Footer/Footer';
 function SavedMovies({ loggedIn }) {
 
   return (
-    <div className="saved-movies">
+    <section className="saved-movies">
       <Header loggedIn={loggedIn} />
-      <SearchForm />
-      <MoviesCardList />
+      <main className="saved-movies__main">
+        <SearchForm />
+        <MoviesCardList />
+      </main>
       <Footer />
-    </div>
+    </section>
   )
 };
 
