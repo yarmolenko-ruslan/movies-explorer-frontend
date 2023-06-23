@@ -1,0 +1,19 @@
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 15.73px;
+  font-weight: 400;
+  transition: opacity 0.3s;
+}
+
+.footer__link:hover {
+  opacity: 70%;
+}
+
+@media (max-width: 320px) {
+  .footer__link {
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+}

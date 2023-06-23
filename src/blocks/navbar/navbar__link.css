@@ -1,0 +1,13 @@
+.navbar__link {
+  text-decoration: none;
+  color: #fff;
+  transition: opacity 0.3s;
+  padding-bottom: 4px;
+  font-size: 18px;
+  line-height: 21.78px;
+  font-weight: 500;
+}
+
+.navbar__link:hover {
+  opacity: 70%;
+}

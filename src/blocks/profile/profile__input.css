@@ -1,0 +1,30 @@
+.profile__input {
+  padding: 1px 0px;
+  max-width: 340px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13.31px;
+  text-align: right;
+}
+
+.profile__input::placeholder {
+  text-align: right;
+  color: #fff;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13.31px;
+}
+
+.profile__input:focus-visible {
+  outline: none;
+}
+
+@media (max-width: 440px) {
+  .profile__input {
+    max-width: 220px;
+  }
+}

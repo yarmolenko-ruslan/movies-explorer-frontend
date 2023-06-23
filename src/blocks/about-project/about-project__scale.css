@@ -1,0 +1,19 @@
+.about-project__scale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 14px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 16.94px;
+  font-weight: 400;
+  height: 36px;
+}
+
+@media (max-width: 320px) {
+  .about-project__scale {
+    font-size: 11px;
+    line-height: 13.31px;
+    margin-bottom: 10px;
+  }
+}

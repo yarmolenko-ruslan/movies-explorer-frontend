@@ -1,0 +1,15 @@
+.header__icon {
+  background-color: #313131;
+  background-image: url(../../images/user-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 11px 11px;
+  background-position: center center;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  transition: opacity 0.3s;
+}
+
+.header__icon:hover {
+  opacity: 70%;
+}

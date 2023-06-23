@@ -1,0 +1,9 @@
+.search-form {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    padding-top: 60px;
+  }
+}

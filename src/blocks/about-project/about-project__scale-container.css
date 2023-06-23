@@ -1,0 +1,11 @@
+.about-project__scale-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+@media (max-width: 320px) {
+  .about-project__scale-container {
+    margin-left: 4px;
+  }
+}

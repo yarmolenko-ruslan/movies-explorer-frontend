@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  .footer__container {
+    max-width: 748px;
+  }
+}

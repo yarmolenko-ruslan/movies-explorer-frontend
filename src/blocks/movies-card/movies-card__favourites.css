@@ -1,0 +1,17 @@
+.movies-card__favourites {
+  background-color: #313131;
+  border-radius: 36px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../../images/favorites.svg);
+  background-size: 10px 13px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.movies-card__favourites:hover {
+  opacity: 70%;
+}

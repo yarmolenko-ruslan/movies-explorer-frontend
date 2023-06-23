@@ -1,0 +1,15 @@
+@import url(../../blocks/header/header.css);
+@import url(../../blocks/header/header__container.css);
+@import url(../../blocks/header/header__logo.css);
+@import url(../../blocks/header/header__info.css);
+@import url(../../blocks/header/header__registr.css);
+@import url(../../blocks/header/header__login.css);
+@import url(../../blocks/header/header__menu.css);
+@import url(../../blocks/header/header__films.css);
+@import url(../../blocks/header/header__link.css);
+@import url(../../blocks/header/header__icon.css);
+@import url(../../blocks/header/header__account.css);
+@import url(../../blocks/header/header__burger-menu.css);
+@import url(../../blocks/header/header__menu-container.css);
+@import url(../../blocks/header/header__account-link.css);
+@import url(../../blocks/header/header__link_weight_400.css);

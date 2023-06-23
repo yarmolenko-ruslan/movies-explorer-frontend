@@ -1,0 +1,13 @@
+.footer__data {
+  margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.73px;
+}
+
+@media (max-width: 320px) {
+  .footer__data {
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+}

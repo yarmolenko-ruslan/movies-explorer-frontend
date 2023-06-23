@@ -1,0 +1,9 @@
+.message__link {
+  text-decoration: none;
+  color: #4285F4;
+  transition: opacity 0.3s;
+}
+
+.message__link:hover {
+  opacity: 70%;
+}

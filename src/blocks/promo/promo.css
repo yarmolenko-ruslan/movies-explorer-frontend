@@ -1,0 +1,11 @@
+.promo {
+  background-color: #202020;
+  width: 100%;
+  padding: 20px 0 61px;
+}
+
+@media (max-width: 320px) {
+  .promo {
+    padding: 14px 0 0 0;
+  }
+}

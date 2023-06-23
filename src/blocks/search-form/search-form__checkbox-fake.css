@@ -1,0 +1,25 @@
+.search-form__checkbox-fake {
+  position: relative;
+  padding: 10px;
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background: #343434;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.search-form__checkbox-fake:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border-radius: 100%;
+  top: 2px;
+  right: auto;
+  background: #fff;
+  border: 1px solid #fff;
+  left: calc(100% - 34px);
+  transition: all 0.3s;
+}

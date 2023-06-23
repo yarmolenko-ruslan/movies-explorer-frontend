@@ -1,0 +1,13 @@
+.header__info {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 30px;
+  align-items: center;
+}
+
+@media (max-width: 320px) {
+  .header__info {
+    gap: 14px;
+  }
+}

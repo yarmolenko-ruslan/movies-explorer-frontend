@@ -1,0 +1,18 @@
+.navbar__close {
+  position: absolute;
+  top: 29px;
+  right: 29px;
+  background-color: transparent;
+  background-image: url(../../images/close.svg);
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.navbar__close:hover {
+  opacity: 70%;
+}

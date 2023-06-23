@@ -1,0 +1,22 @@
+.movies-card {
+  max-width: 364px;
+  max-height: 271px;
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .movies-card {
+    max-width: 339px;
+    max-height: 258px;
+  }
+}
+
+@media (max-width: 320px) {
+  .movies-card {
+    max-width: 300px;
+    max-height: 236px;
+  }
+}

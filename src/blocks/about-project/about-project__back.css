@@ -1,0 +1,16 @@
+.about-project__back {
+  max-width: 228px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .about-project__back {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-project__back {
+    max-width: 100px;
+  }
+}
