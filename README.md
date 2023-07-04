@@ -30,4 +30,6 @@
 
 ### Ссылка
 
+[Pull request](https://github.com/yarmolenko-ruslan/movies-explorer-frontend/pull/2)
+
 [Макет](https://disk.yandex.ru/d/LT_5ue6DVDyNBQ)
