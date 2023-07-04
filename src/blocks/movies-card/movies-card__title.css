@@ -4,4 +4,7 @@
   line-height: 18.15px;
   max-width: 280px;
   margin: 0 0 9px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

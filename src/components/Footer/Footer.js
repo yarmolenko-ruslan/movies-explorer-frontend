@@ -13,12 +13,12 @@ function Footer() {
           </p>
           <ul className="footer__list">
             <li>
-              <a href="https://practicum.yandex.ru/" className="footer__link" target="_blank">
+              <a href="https://practicum.yandex.ru/" className="footer__link" target="_blank" rel="noreferrer">
                 Яндекс.Практикум
               </a>
             </li>
             <li>
-              <a href="https://github.com/yarmolenko-ruslan" className="footer__link" target="_blank">
+              <a href="https://github.com/yarmolenko-ruslan" className="footer__link" target="_blank" rel="noreferrer">
                 Github
               </a>
             </li>

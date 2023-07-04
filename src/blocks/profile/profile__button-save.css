@@ -1,0 +1,29 @@
+.profile__button-save {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  min-width: 410px;
+  min-height: 45px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-color: #3456f3;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.profile__button-save:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  .profile__button-save {
+    min-width: 260px;
+    margin-top: 340px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

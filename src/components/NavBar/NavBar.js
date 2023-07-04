@@ -1,4 +1,6 @@
 import './NavBar.css';
+import { React } from "react";
+import { Link, NavLink } from 'react-router-dom';
 
 function NavBar({ burgerMenuOpened, handleBurgerMenuClose }) {
 
@@ -7,16 +9,16 @@ function NavBar({ burgerMenuOpened, handleBurgerMenuClose }) {
       <button className="navbar__close" onClick={handleBurgerMenuClose}></button>
       <ul className="navbar__menu">
         <li className="navbar__item">
-          <a href="/" className="navbar__link">Главная</a>
+          <NavLink to="/" className="navbar__link">Главная</NavLink>
         </li>
         <li className="navbar__item">
-          <a href="/movies" className="navbar__link navbar__link_active">Фильмы</a>
+          <NavLink to="/movies" className="navbar__link navbar__link_active">Фильмы</NavLink>
         </li>
         <li className="navbar__item">
-          <a href="/saved-movies" className="navbar__link ">Сохранённые фильмы</a>
+          <NavLink to="/saved-movies" className="navbar__link ">Сохранённые фильмы</NavLink>
         </li>
       </ul>
-      <a href="/profile" className="navbar__profile">Аккаунт</a>
+      <NavLink to="/profile" className="navbar__profile">Аккаунт</NavLink>
     </nav>
   )
 }

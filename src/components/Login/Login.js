@@ -1,24 +1,66 @@
 import './Login.css';
+import { Link, NavLink } from 'react-router-dom';
+import { useFormWithValidation } from '../../utils/Validation';
 
-function Login() {
+function Login({ onLogin, errorMessage, setErrorMessage }) {
+
+  const { values, errors, isValid, handleChange } = useFormWithValidation();
+
+  function handleLogin(evt) {
+    evt.preventDefault();
+    onLogin(values.password, values.email);
+  }
+
+  function handleInputsChange(evt) {
+    handleChange(evt);
+    cleanErrorMessage();
+  }
+
+  function cleanErrorMessage() {
+    setErrorMessage('');
+  }
 
   return (
-    <form className="login" name="log">
+    <form className="login" name="log" onSubmit={handleLogin}>
       <div className="login__container">
-        <a href="/" className="login__logo"></a>
+        <NavLink to="/" className="login__logo"></NavLink>
         <h1 className="login__title">
           Рады видеть!
         </h1>
-        <label className="input__label" for="email" >E-mail</label>
-        <input className="register__input input" id="email" type="email" placeholder="Почта" maxLength={50} required />
-        <span className="input__error">Что-то пошло не так...</span>
-        <label className="input__label" for="password">Пароль</label>
-        <input className="register__input input" id="password" type="password" placeholder="Пароль" maxLength={50} minLength={2} required />
-        <span className="input__error input__error_active">Что-то пошло не так...</span>
-        <button type="submit" className="button login__button">Войти</button>
+        
+        <label className="input__label" htmlFor="email" >E-mail</label>
+        <input
+          className="register__input input"
+          name="email"
+          id="email"
+          type="email"
+          value={values.email || ""}
+          onChange={handleInputsChange}
+          placeholder="Почта"
+          minLength={5}
+          maxLength={50}
+          required />
+        <span className="input__error">{errors.email}</span>
+        <label className="input__label" htmlFor="password">Пароль</label>
+        <input
+          className="register__input input"
+          id="password"
+          name='password'
+          type="password"
+          value={values.password || ""}
+          placeholder="Пароль"
+          maxLength={50}
+          minLength={6}
+          onChange={handleInputsChange}
+          required />
+        <span className="input__error">{errors.password}</span>
+        <p className={`input__error-message ${errorMessage && 'input__error-message_visible'}`}>{errorMessage}</p>
+
+        <button type="submit" className={`button login__button ${!isValid && 'button_disabled'}`} disabled={!isValid} title="Войти">Войти</button>
+
         <div className="message">
           <p className="message__text">Еще не зарегистрированы?</p>
-          <a href="/signup" className="message__link">Регистрация</a>
+          <Link to="/signup" className="message__link">Регистрация</Link>
         </div>
       </div>
     </form>

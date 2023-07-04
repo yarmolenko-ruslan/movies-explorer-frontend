@@ -1,0 +1,23 @@
+.profile__button-save_disable {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  min-width: 410px;
+  min-height: 45px;
+  margin-bottom: 50px;
+  background-color: #f8f8f8;
+  color: #c2c2c2;
+  border: none;
+  border-radius: 3px;
+  padding: 0px;
+  cursor: default;
+}
+
+@media (max-width: 767px) {
+  .profile__button-save_disable {
+    min-width: 260px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 10px;
+  }
+}
