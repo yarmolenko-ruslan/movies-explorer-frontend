@@ -99,6 +99,7 @@ function App() {
   }
 
   function onLogout() {
+    setLoggedIn(false);
     localStorage.removeItem('jwt');
     localStorage.removeItem('all-movies-cards');
     localStorage.removeItem('saved-movies-cards');
