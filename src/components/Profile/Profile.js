@@ -1,16 +1,14 @@
 import { React } from 'react';
-import { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CurrentUserContext } from '../../context/CurrentUserContext';
 import { useFormWithValidation } from '../../utils/Validation';
 import './Profile.css';
 import Header from '../Header/Header';
 
-function Profile({ loggedIn, handleUpdateUser, onLogout, errorMessage, setErrorMessage, succesMessage }) {
+function Profile({ loggedIn, handleUpdateUser, onLogout, errorMessage, setErrorMessage, succesMessage, changed, setChanged, setEditMode, editMode }) {
   const currentUser = useContext(CurrentUserContext);
   const { values, setValues, errors, isValid, handleChange } = useFormWithValidation();
-  const [changed, setChanged] = useState(false);
-  const [editMode, setEditMode] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {

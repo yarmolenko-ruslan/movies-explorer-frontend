@@ -1,4 +1,4 @@
-import { useState, useEffect, React } from 'react';
+import { useEffect, React } from 'react';
 import { LENGTH_SHORT_MOVIES } from '../../utils/Settings';
 
 import Header from '../Header/Header';
@@ -8,11 +8,7 @@ import Preloader from './Preloader/Preloader';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import Footer from '../Footer/Footer';
 
-function Movies({ type, loggedIn, loading, cards, refreshCards, handleCardSave, handleCardRemove, isInFavourites }) {
-  const [searchValue, setSearchValue] = useState('');
-  const [shortDurations, setShortDurations] = useState(false);
-  const [visibleCards, setVisibleCards] = useState([]);
-  const [searchCount, setSearchCount] = useState(0);
+function Movies({ type, loggedIn, loading, cards, refreshCards, handleCardSave, handleCardRemove, isInFavourites, shortDurations, setShortDurations, searchValue, setSearchValue, visibleCards, setVisibleCards, searchCount, setSearchCount }) {
 
   useEffect(() => {
     setVisibleCards(filterCards(cards));

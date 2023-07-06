@@ -16,13 +16,18 @@ import Login from '../Login/Login';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
 function App() {
-
+  const [shortDurations, setShortDurations] = useState(false);
   const [succesMessage, setSuccesMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [visibleCards, setVisibleCards] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
   const [currentUser, setCurrentUser] = useState([]);
+  const [searchCount, setSearchCount] = useState(0);
   const [likedCards, setLikedCards] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [editMode, setEditMode] = useState(false);
   const [loggedIn, setLoggedIn] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [changed, setChanged] = useState(false);
   const [cards, setCards] = useState([]);
   const navigate = useNavigate();
 
@@ -100,13 +105,22 @@ function App() {
 
   function onLogout() {
     setLoggedIn(false);
+    setShortDurations(false);
+    setCurrentUser([]);
+    setCards([]);
+    setLikedCards([]);
+    setSearchValue('');
+    setVisibleCards([])
+    setSearchCount(0);
+    setChanged(false);
+    setEditMode(false);
     localStorage.removeItem('jwt');
     localStorage.removeItem('all-movies-cards');
     localStorage.removeItem('saved-movies-cards');
     localStorage.removeItem('all-movies-search-form-searchValue');
     localStorage.removeItem('saved-movies-search-form-searchValue');
-    localStorage.removeItem('all-movies-search-form-isShortDurations');
-    localStorage.removeItem('saved-movies-search-form-isShortDurations');
+    localStorage.removeItem('all-movies-search-form-shortDurations');
+    localStorage.removeItem('saved-movies-search-form-shortDurations');
   }
 
   function handleUpdateUser(name, email) {
@@ -222,17 +236,62 @@ function App() {
 
           <Route path="/movies" element={<ProtectedRoute loggedIn={loggedIn} />}>
             <Route path="/movies" element={
-              <Movies key="all-movies" type="all-movies" loading={loading} loggedIn={loggedIn} cards={cards} refreshCards={refreshCards} handleCardSave={handleCardSave} handleCardRemove={handleCardRemove} isInFavourites={false} />
+              <Movies key="all-movies"
+                type="all-movies"
+                loading={loading}
+                shortDurations={shortDurations}
+                setShortDurations={setShortDurations}
+                loggedIn={loggedIn}
+                cards={cards}
+                refreshCards={refreshCards}
+                handleCardSave={handleCardSave}
+                handleCardRemove={handleCardRemove}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+                isInFavourites={false}
+                visibleCards={visibleCards}
+                setVisibleCards={setVisibleCards}
+                searchCount={searchCount}
+                setSearchCount={setSearchCount}
+              />
             } />
           </Route>
           <Route path="/saved-movies" element={<ProtectedRoute loggedIn={loggedIn} />}>
             <Route path="/saved-movies" element={
-              <Movies key="saved-movies" type="saved-movies" loggedIn={loggedIn} cards={likedCards} refreshCards={refreshLikedCards} handleCardSave={handleCardSave} handleCardRemove={handleCardRemove} isInFavourites={true} />
+              <Movies
+                key="saved-movies"
+                type="saved-movies"
+                loggedIn={loggedIn}
+                shortDurations={shortDurations}
+                setShortDurations={setShortDurations}
+                cards={likedCards}
+                refreshCards={refreshLikedCards}
+                handleCardSave={handleCardSave}
+                handleCardRemove={handleCardRemove}
+                isInFavourites={true}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+                visibleCards={visibleCards}
+                setVisibleCards={setVisibleCards}
+                searchCount={searchCount}
+                setSearchCount={setSearchCount}
+              />
             } />
           </Route>
           <Route path="/profile" element={<ProtectedRoute loggedIn={loggedIn} />}>
             <Route path="/profile" element={
-              <Profile handleUpdateUser={handleUpdateUser} onLogout={onLogout} loggedIn={loggedIn} errorMessage={errorMessage} setErrorMessage={setErrorMessage} succesMessage={succesMessage} />
+              <Profile
+                handleUpdateUser={handleUpdateUser}
+                onLogout={onLogout}
+                loggedIn={loggedIn}
+                errorMessage={errorMessage}
+                setErrorMessage={setErrorMessage}
+                succesMessage={succesMessage}
+                changed={changed}
+                setChanged={setChanged}
+                editMode={editMode}
+                setEditMode={setEditMode}
+              />
             } />
           </Route>
         </Routes>
