@@ -41,7 +41,7 @@ function Profile({ loggedIn, handleUpdateUser, onLogout, errorMessage, setErrorM
 
   function signOut() {
     onLogout();
-    navigate('/signin');
+    navigate('/');
   }
 
   useEffect(() => {
