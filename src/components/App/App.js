@@ -9,6 +9,7 @@ import { moviesApi } from '../../utils/MoviesApi';
 import './App.css';
 import Main from '../Main/Main';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import RedirectRoute from '../RedirectRoute/RedirectRoute';
 import Movies from '../Movies/Movies';
 import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
@@ -227,15 +228,21 @@ function App() {
           } />
 
           <Route exact path="/signup" element={
-            <Register onRegister={onRegister} errorMessage={errorMessage} setErrorMessage={setErrorMessage} />
-          } />
+            <RedirectRoute loggedIn={loggedIn}>
+              <Register onRegister={onRegister} errorMessage={errorMessage} setErrorMessage={setErrorMessage} />
+            </RedirectRoute>}
+          />
+
           <Route exact path="/signin" element={
-            <Login onLogin={onLogin} errorMessage={errorMessage} setErrorMessage={setErrorMessage} />
-          } />
+            <RedirectRoute loggedIn={loggedIn}>
+              <Login onLogin={onLogin} errorMessage={errorMessage} setErrorMessage={setErrorMessage} />
+            </RedirectRoute>}
+          />
+
           <Route path="*" element={<PageNotFound />} />
 
           <Route exact path="/saved-movies" element={
-            <ProtectedRoute path="/saved-movies" loggedIn={loggedIn}>
+            <ProtectedRoute loggedIn={loggedIn}>
               <Movies
                 key="saved-movies"
                 type="saved-movies"
@@ -259,7 +266,7 @@ function App() {
           />
 
           <Route exact path="/profile" element={
-            <ProtectedRoute path="/profile" loggedIn={loggedIn}>
+            <ProtectedRoute loggedIn={loggedIn}>
               <Profile
                 handleUpdateUser={handleUpdateUser}
                 onLogout={onLogout}
@@ -277,7 +284,7 @@ function App() {
           />
 
           <Route exact path="/movies" element={
-            <ProtectedRoute path="/movies" loggedIn={loggedIn}>
+            <ProtectedRoute loggedIn={loggedIn}>
               <Movies key="all-movies"
                 type="all-movies"
                 loading={loading}
