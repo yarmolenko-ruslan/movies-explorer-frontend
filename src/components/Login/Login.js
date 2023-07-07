@@ -39,6 +39,7 @@ function Login({ onLogin, errorMessage, setErrorMessage }) {
           placeholder="Почта"
           minLength={5}
           maxLength={50}
+          pattern="[A-z0-9!#$%&'*+-/=?^_`{|]{1,64}@[A-z0-9-.]{2,253}\\.[A-z]{2,63}"
           required />
         <span className="input__error">{errors.email}</span>
         <label className="input__label" htmlFor="password">Пароль</label>

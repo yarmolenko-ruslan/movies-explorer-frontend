@@ -24,8 +24,8 @@ function App() {
   const [currentUser, setCurrentUser] = useState([]);
   const [searchCount, setSearchCount] = useState(0);
   const [likedCards, setLikedCards] = useState([]);
-  const [editMode, setEditMode] = useState(false);
   const [loggedIn, setLoggedIn] = useState(null);
+  const [editMode, setEditMode] = useState(false);
   const [loading, setLoading] = useState(false);
   const [changed, setChanged] = useState(false);
   const [cards, setCards] = useState([]);
@@ -59,7 +59,7 @@ function App() {
       authApi.getUserAuth(jwt)
         .then((data) => {
           setLoggedIn(true);
-          navigate('/movies');
+          navigate();
         })
         .catch((err) => {
           setLoggedIn(false);
@@ -222,46 +222,24 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <div className="App">
         <Routes>
-          <Route path="/" element={
+          <Route index path="/" element={
             <Main loggedIn={loggedIn} />
           } />
 
-          <Route path="/signup" element={
+          <Route exact path="/signup" element={
             <Register onRegister={onRegister} errorMessage={errorMessage} setErrorMessage={setErrorMessage} />
           } />
-          <Route path="/signin" element={
+          <Route exact path="/signin" element={
             <Login onLogin={onLogin} errorMessage={errorMessage} setErrorMessage={setErrorMessage} />
           } />
           <Route path="*" element={<PageNotFound />} />
 
-          <Route path="/movies" element={<ProtectedRoute loggedIn={loggedIn} />}>
-            <Route path="/movies" element={
-              <Movies key="all-movies"
-                type="all-movies"
-                loading={loading}
-                shortDurations={shortDurations}
-                setShortDurations={setShortDurations}
-                loggedIn={loggedIn}
-                cards={cards}
-                refreshCards={refreshCards}
-                handleCardSave={handleCardSave}
-                handleCardRemove={handleCardRemove}
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
-                isInFavourites={false}
-                visibleCards={visibleCards}
-                setVisibleCards={setVisibleCards}
-                searchCount={searchCount}
-                setSearchCount={setSearchCount}
-              />
-            } />
-          </Route>
-          <Route path="/saved-movies" element={<ProtectedRoute loggedIn={loggedIn} />}>
-            <Route path="/saved-movies" element={
+          <Route exact path="/saved-movies" element={
+            <ProtectedRoute path="/saved-movies" loggedIn={loggedIn}>
               <Movies
                 key="saved-movies"
                 type="saved-movies"
-                loggedIn={loggedIn}
+                loggedIn={true}
                 shortDurations={shortDurations}
                 setShortDurations={setShortDurations}
                 cards={likedCards}
@@ -276,14 +254,16 @@ function App() {
                 searchCount={searchCount}
                 setSearchCount={setSearchCount}
               />
-            } />
-          </Route>
-          <Route path="/profile" element={<ProtectedRoute loggedIn={loggedIn} />}>
-            <Route path="/profile" element={
+            </ProtectedRoute>
+          }
+          />
+
+          <Route exact path="/profile" element={
+            <ProtectedRoute path="/profile" loggedIn={loggedIn}>
               <Profile
                 handleUpdateUser={handleUpdateUser}
                 onLogout={onLogout}
-                loggedIn={loggedIn}
+                loggedIn={true}
                 errorMessage={errorMessage}
                 setErrorMessage={setErrorMessage}
                 succesMessage={succesMessage}
@@ -292,11 +272,36 @@ function App() {
                 editMode={editMode}
                 setEditMode={setEditMode}
               />
-            } />
-          </Route>
+            </ProtectedRoute>
+          }
+          />
+
+          <Route exact path="/movies" element={
+            <ProtectedRoute path="/movies" loggedIn={loggedIn}>
+              <Movies key="all-movies"
+                type="all-movies"
+                loading={loading}
+                shortDurations={shortDurations}
+                setShortDurations={setShortDurations}
+                loggedIn={true}
+                cards={cards}
+                refreshCards={refreshCards}
+                handleCardSave={handleCardSave}
+                handleCardRemove={handleCardRemove}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+                isInFavourites={false}
+                visibleCards={visibleCards}
+                setVisibleCards={setVisibleCards}
+                searchCount={searchCount}
+                setSearchCount={setSearchCount}
+              />
+            </ProtectedRoute>
+          }
+          />
         </Routes>
       </div>
-    </CurrentUserContext.Provider>
+    </CurrentUserContext.Provider >
   );
 
 }

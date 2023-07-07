@@ -32,7 +32,7 @@ function Register({ onRegister, errorMessage, setErrorMessage }) {
         <span className="input__error">{errors.name}</span>
 
         <label className="input__label" htmlFor="email" >E-mail</label>
-        <input className="register__input input" id="email" type="email" placeholder="Почта" value={values.email || ""} name='email' onChange={handleInputsChange} minLength={3} maxLength={50} required />
+        <input className="register__input input" id="email" type="email" placeholder="Почта" value={values.email || ""} name='email' onChange={handleInputsChange} minLength={3} maxLength={50} pattern="[A-z0-9!#$%&'*+-/=?^_`{|]{1,64}@[A-z0-9-.]{2,253}\\.[A-z]{2,63}" required />
         <span className="input__error">{errors.email}</span>
 
         <label className="input__label" htmlFor="password">Пароль</label>
