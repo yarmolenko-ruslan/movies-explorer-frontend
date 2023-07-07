@@ -4,7 +4,8 @@ import './MoviesCard.css';
 function MoviesCard({ card, isInFavourites, isSaved, onCardSave, onCardRemove }) {
   const useButtonClassName = (() => {
     if (isInFavourites) {
-      return 'movies-card__favourites movies-card__favourites_active';
+      
+      return 'movies-card__delete';
     } else if (isSaved) {
       return 'movies-card__favourites movies-card__favourites_active';
     } else {

@@ -1,5 +1,5 @@
 import { useEffect, React } from 'react';
-import { LENGTH_SHORT_MOVIES } from '../../utils/Settings';
+import { LENGTH_SHORT_MOVIES } from '../../utils/Constants';
 
 import Header from '../Header/Header';
 import SearchForm from './SearchForm/SearchForm';

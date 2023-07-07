@@ -1,7 +1,9 @@
+import { moviesApiUrl } from './Constants';
+
 class MoviesApi {
   constructor(options) {
     this.url = options.baseUrl;
-    this.headers = options.headers; 
+    this.headers = options.headers;
   }
 
   _checkResponse(res) {
@@ -16,13 +18,11 @@ class MoviesApi {
       headers: this.headers,
     })
       .then(this._checkResponse);
-    };
+  };
 }
 
-export const apiUrl = 'https://api.nomoreparties.co/';
-
 export const moviesApi = new MoviesApi({
-  baseUrl: `${apiUrl}`,
+  baseUrl: moviesApiUrl,
   headers: {
     'Content-Type': 'application/json',
   }

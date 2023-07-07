@@ -1,4 +1,4 @@
-const baseUrl = 'https://api.movies.explorer.nomoredomains.rocks';
+import { baseUrl } from './Constants';
 
 class AuthApi {
   _checkResponse(res) {

@@ -3,7 +3,7 @@ import { React, useState, useEffect } from "react";
 import MoviesCard from '../MoviesCard/MoviesCard';
 import {
   WIDTH_1200, WIDTH_480, VISIBLE_MOVIES_5, VISIBLE_MOVIES_8, VISIBLE_MOVIES_12, UPLOAD_MOVIES_2, UPLOAD_MOVIES_3
-} from '../../utils/Settings';
+} from '../../utils/Constants';
 
 function MoviesCardList({ isInFavourites, cards, handleCardSave, handleCardRemove }) {
   const [showedCards, setShowedCards] = useState([]);

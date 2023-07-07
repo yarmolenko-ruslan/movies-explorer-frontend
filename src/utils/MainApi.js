@@ -1,3 +1,5 @@
+import { baseUrl } from './Constants';
+
 class MainApi {
   constructor(options) {
     this.url = options.baseUrl;
@@ -77,7 +79,7 @@ class MainApi {
 }
 
 export const mainApi = new MainApi({
-  baseUrl: 'https://api.movies.explorer.nomoredomains.rocks',
+  baseUrl: baseUrl,
   headers: {
     'Content-Type': 'application/json',
   }
