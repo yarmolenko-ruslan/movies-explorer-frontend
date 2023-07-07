@@ -239,8 +239,6 @@ function App() {
             </RedirectRoute>}
           />
 
-          <Route path="*" element={<PageNotFound />} />
-
           <Route exact path="/saved-movies" element={
             <ProtectedRoute loggedIn={loggedIn}>
               <Movies
@@ -306,6 +304,8 @@ function App() {
             </ProtectedRoute>
           }
           />
+
+          <Route path="*" element={<PageNotFound loggedIn={loggedIn} />} />
         </Routes>
       </div>
     </CurrentUserContext.Provider >
