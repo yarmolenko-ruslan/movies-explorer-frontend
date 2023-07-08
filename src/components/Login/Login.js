@@ -21,25 +21,26 @@ function Login({ onLogin, errorMessage, setErrorMessage }) {
   }
 
   return (
-    <form className="login" name="log" onSubmit={handleLogin}>
+
+    <form className="login" name="log" noValidate onSubmit={handleLogin}>
       <div className="login__container">
         <NavLink to="/" className="login__logo"></NavLink>
         <h1 className="login__title">
           Рады видеть!
         </h1>
-        
+
         <label className="input__label" htmlFor="email" >E-mail</label>
         <input
           className="register__input input"
           name="email"
           id="email"
-          type="email"
+          type="text"
           value={values.email || ""}
           onChange={handleInputsChange}
           placeholder="Почта"
           minLength={5}
           maxLength={50}
-          pattern="[A-z0-9!#$%&'*+-/=?^_`{|]{1,64}@[A-z0-9-.]{2,253}\\.[A-z]{2,63}"
+          pattern="^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$"
           required />
         <span className="input__error">{errors.email}</span>
         <label className="input__label" htmlFor="password">Пароль</label>

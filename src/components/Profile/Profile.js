@@ -83,7 +83,7 @@ function Profile({ loggedIn, handleUpdateUser, onLogout, errorMessage, setErrorM
             onChange={handleChangeEmail}
             minLength={4}
             maxLength={50}
-            pattern="[A-z0-9!#$%&'*+-/=?^_`{|]{1,64}@[A-z0-9-.]{2,253}\\.[A-z]{2,63}"
+            pattern="^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$"
             disabled={!editMode}
             required />
         </div>
