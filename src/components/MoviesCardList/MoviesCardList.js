@@ -22,13 +22,26 @@ function MoviesCardList({ isInFavourites, cards, handleCardSave, handleCardRemov
     let showedCardsCountAtOnce = displayedMovies;
 
     if (windowWidth <= WIDTH_480) {
-      showedCardsCountAtOnce = VISIBLE_MOVIES_5;
+
+      if (showedCards.length > VISIBLE_MOVIES_5) {
+        showedCardsCountAtOnce = showedCards.length;
+      } else {
+        showedCardsCountAtOnce = VISIBLE_MOVIES_5;
+      }
       setMoviesToLoad(UPLOAD_MOVIES_2);
     } else if (windowWidth <= WIDTH_1200) {
-      showedCardsCountAtOnce = VISIBLE_MOVIES_8;
+      if (showedCards.length > VISIBLE_MOVIES_8) {
+        showedCardsCountAtOnce = showedCards.length;
+      } else {
+        showedCardsCountAtOnce = VISIBLE_MOVIES_8;
+      }
       setMoviesToLoad(UPLOAD_MOVIES_2);
     } else {
-      showedCardsCountAtOnce = VISIBLE_MOVIES_12;
+      if (showedCards.length > VISIBLE_MOVIES_12) {
+        showedCardsCountAtOnce = showedCards.length;
+      } else {
+        showedCardsCountAtOnce = VISIBLE_MOVIES_12;
+      }
       setMoviesToLoad(UPLOAD_MOVIES_3);
     }
 
@@ -49,7 +62,14 @@ function MoviesCardList({ isInFavourites, cards, handleCardSave, handleCardRemov
   }
 
   const renderCard = (card) => {
-    return <MoviesCard card={card} key={card.movieId} isInFavourites={isInFavourites} isSaved={card.isSaved} onCardSave={handleCardSave} onCardRemove={handleCardRemove}></MoviesCard>
+    return <MoviesCard
+      card={card}
+      key={card.movieId}
+      isInFavourites={isInFavourites}
+      isSaved={card.isSaved}
+      onCardSave={handleCardSave}
+      onCardRemove={handleCardRemove}>
+    </MoviesCard>
   }
 
   return (
