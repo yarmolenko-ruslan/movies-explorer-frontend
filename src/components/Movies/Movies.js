@@ -11,8 +11,14 @@ import Footer from '../Footer/Footer';
 function Movies({ type, loggedIn, loading, cards, refreshCards, handleCardSave, handleCardRemove, isInFavourites, shortDurations, setShortDurations, searchValue, setSearchValue, visibleCards, setVisibleCards, searchCount, setSearchCount }) {
 
   useEffect(() => {
+    if (type === 'saved-movies') {
+      handleSearchCards();
+    }
+  }, [type]);
+
+  useEffect(() => {
     setVisibleCards(filterCards(cards));
-  }, [cards, searchCount]);
+  }, [cards, searchCount, type]);
 
   function handleSearchCards() {
     refreshCards();
@@ -32,7 +38,15 @@ function Movies({ type, loggedIn, loading, cards, refreshCards, handleCardSave, 
     <div className="movies">
       <Header loggedIn={loggedIn} />
       <main className="movies__main">
-        <SearchForm key={`${type}-search-form`} type={`${type}-search-form`} searchValue={searchValue} setSearchValue={setSearchValue} shortDurations={shortDurations} setShortDurations={setShortDurations} handleSearchCards={handleSearchCards} isInFavourites={isInFavourites} />
+        <SearchForm
+          key={`${type}-search-form`}
+          type={`${type}-search-form`}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          shortDurations={shortDurations}
+          setShortDurations={setShortDurations}
+          handleSearchCards={handleSearchCards}
+          isInFavourites={isInFavourites} />
         {(() => {
           if (loading) { return (<Preloader />) }
           else if (searchCount > 0 && visibleCards.length === 0) { return (<PageNotFound />) }
