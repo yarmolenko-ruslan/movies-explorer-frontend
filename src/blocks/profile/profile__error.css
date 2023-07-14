@@ -1,9 +1,7 @@
-.input__error {
-  display: block;
-  height: 25px;
+.profile__error {
   font-size: 10px;
   line-height: 12.1px;
   font-weight: 400;
-  margin: 2px 0;
   color: #ee3465;
+  margin: 0;
 }

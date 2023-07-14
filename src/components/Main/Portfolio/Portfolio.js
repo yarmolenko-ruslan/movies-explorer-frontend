@@ -9,13 +9,13 @@ function Portfolio() {
         </h2>
         <ul className="portfolio__list">
           <li className="portfolio__point">
-            <a href="https://github.com/yarmolenko-ruslan/how-to-learn" className="portfolio__link" target="_blank">Статичный сайт</a>
+            <a href="https://github.com/yarmolenko-ruslan/how-to-learn" className="portfolio__link" target="_blank" rel="noreferrer">Статичный сайт</a>
           </li>
           <li className="portfolio__point">
-            <a href="https://github.com/yarmolenko-ruslan/russian-travel" className="portfolio__link" target="_blank">Адаптивный сайт</a>
+            <a href="https://github.com/yarmolenko-ruslan/russian-travel" className="portfolio__link" target="_blank" rel="noreferrer">Адаптивный сайт</a>
           </li>
           <li className="portfolio__point">
-            <a href="https://github.com/yarmolenko-ruslan/mesto-react" className="portfolio__link" target="_blank">Одностраничное приложение</a>
+            <a href="https://github.com/yarmolenko-ruslan/mesto-react" className="portfolio__link" target="_blank" rel="noreferrer">Одностраничное приложение</a>
           </li>
         </ul>
       </div>

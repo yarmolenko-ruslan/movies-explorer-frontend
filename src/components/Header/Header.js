@@ -1,11 +1,12 @@
 import './Header.css';
 import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 
 function Header({ loggedIn }) {
   const [burgerMenuOpened, setBurgerMenuOpened] = useState(false);
 
-  function handleBurgerMenuClick() {
+  function handleBurgerMenuOpen() {
     setBurgerMenuOpened(true);
   }
 
@@ -16,36 +17,37 @@ function Header({ loggedIn }) {
   return (
     <header className="header">
       <div className="header__container container">
-        <a href="/" className="header__logo" alt="Логотип"></a>
+        <Link className="header__logo" to="/" alt="Логотип"></Link>
         {(!loggedIn) ? (
           <div className="header__info">
-            <a href="/signup" className="header__registr">
+            <Link to="/signup" className="header__registr">
               Регистрация
-            </a>
-            <a href="/signin" className="header__login">
+            </Link>
+            <Link to="/signin" className="header__login">
               Войти
-            </a>
+            </Link>
           </div>
         ) :
           (
             <div className="header__menu">
               <div className="header__menu-container">
                 <div className="header__films">
-                  <a href="/movies" className="header__link">
+                  <NavLink to="/movies" className={({ isActive }) => isActive ? "header__link header__link_active" : "header__link"}>
                     Фильмы
-                  </a>
-                  <a href="/saved-movies" className="header__link header__link_weight_400">
+                  </NavLink>
+                  <NavLink to="/saved-movies"
+                    className={({ isActive }) => isActive ? "header__link header__link_active" : "header__link"}>
                     Сохранённые фильмы
-                  </a>
+                  </NavLink>
                 </div>
                 <div className="header__account">
-                  <a href="/profile" className="header__link header__account-link">
+                  <Link to="/profile" className="header__link header__account-link">
                     Аккаунт
-                  </a>
-                  <a href="/profile" className="header__icon"></a>
+                  </Link>
+                  <Link to="/profile" className="header__icon"></Link>
                 </div>
               </div>
-              <button className="header__burger-menu" onClick={handleBurgerMenuClick}></button>
+              <button className="header__burger-menu" onClick={handleBurgerMenuOpen}></button>
             </div>
           )
         }

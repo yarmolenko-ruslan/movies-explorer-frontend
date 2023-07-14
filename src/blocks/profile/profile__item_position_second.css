@@ -1,15 +1,15 @@
 .profile__item_position_second {
-  margin-bottom: 203px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
   .profile__item_position_second {
-    margin-bottom: 193px;
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 440px) {
   .profile__item_position_second {
-    margin-bottom: 362px;
+    margin-bottom: 10px;
   }
 }

@@ -7,3 +7,10 @@
 @import url(../../blocks/profile/profile__item_position_second.css);
 @import url(../../blocks/profile/profile__item_position_first.css);
 @import url(../../blocks/profile/profile__button_red.css);
+@import url(../../blocks/profile/profile__error-container.css);
+@import url(../../blocks/profile/profile__error.css);
+@import url(../../blocks/profile/profile__succes-message.css);
+@import url(../../blocks/profile/profile__error-message.css);
+@import url(../../blocks/profile/profile__button_visible.css);
+@import url(../../blocks/profile/profile__button-save_disable.css);
+@import url(../../blocks/profile/profile__button-save.css);
